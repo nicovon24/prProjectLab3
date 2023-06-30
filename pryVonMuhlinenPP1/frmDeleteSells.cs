@@ -71,10 +71,14 @@ namespace pryVonMuhlinenPP1
                         reader2.Close();
                         ClsCbSell.table = "Ventas";
                         ClsCbSell.column = "ID";
+                        cbID.Text = "";
+                        
                         ClsCbSell.comboBox = cbID;
                         cbID.Items.Clear();
-                        cbID.Text = "";
                         ClsCbSell.ChangeCB();
+
+                        lblClientRes.Text = "";
+                        lblProductRes.Text = "";
                     }
                     else
                     {
@@ -161,6 +165,21 @@ namespace pryVonMuhlinenPP1
                         readerProduct.Close(); 
 
 
+                        //GETTING CLIENT NAME
+                        OleDbCommand commandClient = new OleDbCommand();
+                        commandClient.Connection = conexionDB;
+                        commandClient.CommandType = CommandType.Text;
+                        commandClient.CommandText = "SELECT * FROM Clientes WHERE ID = @ID";
+                        commandClient.Parameters.AddWithValue("@ID", idClient);
+
+                        OleDbDataReader readerClient = commandClient.ExecuteReader();
+
+                        if (readerClient.Read())
+                        {
+                            lblClientRes.Text = readerClient["Nombre"].ToString();
+                        }
+
+                        readerClient.Close(); 
                     }
                 }
                 catch (Exception err)
