@@ -35,18 +35,18 @@
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.lblEndDate = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.cbxAllowDate = new System.Windows.Forms.CheckBox();
             this.cbxAllowEmployee = new System.Windows.Forms.CheckBox();
             this.btnFilter = new System.Windows.Forms.Button();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.lblDate = new System.Windows.Forms.Label();
             this.lblEmployee = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.cbEmployee = new System.Windows.Forms.ComboBox();
             this.lblCounterRes = new System.Windows.Forms.Button();
             this.lblCounter = new System.Windows.Forms.Label();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
-            this.lblEndDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdSells)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -113,7 +113,7 @@
             this.groupBox1.Controls.Add(this.lblDate);
             this.groupBox1.Controls.Add(this.cbEmployee);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(22, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(662, 199);
@@ -121,6 +121,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filters";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpEndDate.Enabled = false;
+            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEndDate.Location = new System.Drawing.Point(104, 89);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(154, 24);
+            this.dtpEndDate.TabIndex = 20;
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Location = new System.Drawing.Point(17, 95);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(69, 18);
+            this.lblEndDate.TabIndex = 19;
+            this.lblEndDate.Text = "End Date";
             // 
             // btnClear
             // 
@@ -137,6 +156,7 @@
             // cbxAllowDate
             // 
             this.cbxAllowDate.AutoSize = true;
+            this.cbxAllowDate.ForeColor = System.Drawing.Color.Black;
             this.cbxAllowDate.Location = new System.Drawing.Point(156, 142);
             this.cbxAllowDate.Name = "cbxAllowDate";
             this.cbxAllowDate.Size = new System.Drawing.Size(102, 22);
@@ -148,6 +168,7 @@
             // cbxAllowEmployee
             // 
             this.cbxAllowEmployee.AutoSize = true;
+            this.cbxAllowEmployee.ForeColor = System.Drawing.Color.Black;
             this.cbxAllowEmployee.Location = new System.Drawing.Point(365, 142);
             this.cbxAllowEmployee.Name = "cbxAllowEmployee";
             this.cbxAllowEmployee.Size = new System.Drawing.Size(138, 22);
@@ -178,15 +199,6 @@
             this.dtpDate.Size = new System.Drawing.Size(154, 24);
             this.dtpDate.TabIndex = 14;
             // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(17, 41);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(39, 18);
-            this.lblDate.TabIndex = 13;
-            this.lblDate.Text = "Date";
-            // 
             // lblEmployee
             // 
             this.lblEmployee.AutoSize = true;
@@ -195,6 +207,15 @@
             this.lblEmployee.Size = new System.Drawing.Size(74, 18);
             this.lblEmployee.TabIndex = 11;
             this.lblEmployee.Text = "Employee";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(17, 41);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(39, 18);
+            this.lblDate.TabIndex = 13;
+            this.lblDate.Text = "Date";
             // 
             // cbEmployee
             // 
@@ -222,37 +243,18 @@
             // 
             this.lblCounter.AutoSize = true;
             this.lblCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCounter.ForeColor = System.Drawing.Color.White;
+            this.lblCounter.ForeColor = System.Drawing.Color.Black;
             this.lblCounter.Location = new System.Drawing.Point(488, 650);
             this.lblCounter.Name = "lblCounter";
             this.lblCounter.Size = new System.Drawing.Size(114, 18);
             this.lblCounter.TabIndex = 15;
             this.lblCounter.Text = "Number of data:";
             // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpEndDate.Enabled = false;
-            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(104, 89);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(154, 24);
-            this.dtpEndDate.TabIndex = 20;
-            // 
-            // lblEndDate
-            // 
-            this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(17, 95);
-            this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(69, 18);
-            this.lblEndDate.TabIndex = 19;
-            this.lblEndDate.Text = "End Date";
-            // 
             // frmConsultSells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(748, 729);
             this.Controls.Add(this.lblCounter);
             this.Controls.Add(this.lblCounterRes);

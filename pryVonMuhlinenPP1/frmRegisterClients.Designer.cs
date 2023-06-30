@@ -52,7 +52,7 @@
             // 
             this.lblAdress.AutoSize = true;
             this.lblAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdress.ForeColor = System.Drawing.Color.White;
+            this.lblAdress.ForeColor = System.Drawing.Color.Black;
             this.lblAdress.Location = new System.Drawing.Point(38, 129);
             this.lblAdress.Name = "lblAdress";
             this.lblAdress.Size = new System.Drawing.Size(54, 18);
@@ -63,7 +63,7 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.ForeColor = System.Drawing.Color.White;
+            this.lblPhone.ForeColor = System.Drawing.Color.Black;
             this.lblPhone.Location = new System.Drawing.Point(38, 200);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(51, 18);
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(466, 328);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSend);
@@ -132,7 +132,7 @@
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblAdress);
             this.Controls.Add(this.lblName);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmRegisterClients";
             this.Text = "Register clients";
             this.Load += new System.EventHandler(this.frmRegisterClients_Load);
