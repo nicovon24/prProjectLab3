@@ -87,5 +87,35 @@ namespace pryVonMuhlinenPP1
         {
 
         }
+
+        private void nudIDSells_ValueChanged(object sender, EventArgs e)
+        {
+            OleDbConnection conexionDB = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BD.mdb");
+            conexionDB.Open();
+
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = conexionDB;
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT * FROM Ventas WHERE ID = @ID";
+            command.Parameters.AddWithValue("@ID", nudIDSells.Text);
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                cbExists.Enabled = true;
+            }
+            else
+            {
+                cbExists.Enabled = false;
+            }
+
+            conexionDB.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
