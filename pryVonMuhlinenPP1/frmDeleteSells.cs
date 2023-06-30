@@ -101,5 +101,77 @@ namespace pryVonMuhlinenPP1
         {
 
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        //checking data for id
+        private void btnCheckData_Click(object sender, EventArgs e)
+        {
+            if (cbID.Text != "")
+            {
+                try
+                {
+                    OleDbConnection conexionDB = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BD.mdb");
+                    conexionDB.Open();
+
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = conexionDB;
+                    command.CommandType = CommandType.Text;
+                    command.CommandText = "SELECT * FROM Ventas WHERE ID = @ID";
+                    command.Parameters.AddWithValue("@ID", cbID.Text);
+
+                    OleDbDataReader reader = command.ExecuteReader();
+
+                    int idProduct = 0, idClient = 0;
+                    bool foundData = false;
+
+                    //checking product and client data
+                    if (reader.Read())
+                    {
+                        idProduct = int.Parse(reader["IDProducto"].ToString());
+                        idClient = int.Parse(reader["IDCliente"].ToString());
+                        foundData = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sell could not be found");
+                    }
+
+                    reader.Close();
+
+                    if (foundData == true)
+                    {
+                        //GETTING PRODUCT NAME
+                        OleDbCommand commandProduct = new OleDbCommand();
+                        commandProduct.Connection = conexionDB;
+                        commandProduct.CommandType = CommandType.Text;
+                        commandProduct.CommandText = "SELECT * FROM Productos WHERE ID = @ID";
+                        commandProduct.Parameters.AddWithValue("@ID", idProduct);
+
+                        OleDbDataReader readerProduct = commandProduct.ExecuteReader();
+
+                        if (readerProduct.Read())
+                        {
+                            lblProductRes.Text = readerProduct["Nombre"].ToString();
+                        }
+
+                        readerProduct.Close(); 
+
+
+                    }
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Data missing");
+            }
+        }
     }
 }
