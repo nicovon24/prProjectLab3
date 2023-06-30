@@ -14,17 +14,16 @@ namespace pryVonMuhlinenPP1
 {
     public partial class frmDeleteSells : Form
     {
-        //ClsCombobox ClsCbClient = new ClsCombobox();
-        ClsSell ClsNewSell = new ClsSell();
+        ClsCombobox ClsCbSell = new ClsCombobox();
         public frmDeleteSells()
         {
             InitializeComponent();
 
             //*getting clients comboboxed
-            //ClsCbClient.comboBox = cbClient;
-            //ClsCbClient.column = "Nombre";
-            //ClsCbClient.table = "Clientes";
-            //ClsCbClient.ChangeCB();
+            ClsCbSell.table = "Ventas";
+            ClsCbSell.column = "ID";
+            ClsCbSell.comboBox = cbID;
+            ClsCbSell.ChangeCB();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -37,7 +36,7 @@ namespace pryVonMuhlinenPP1
         private void button1_Click(object sender, EventArgs e)
         {
             //*ids que van al form
-            if (nudIDSells.Text != "0")
+            if (cbID.Text != "")
             {
                 try
                 {
@@ -49,7 +48,7 @@ namespace pryVonMuhlinenPP1
                     command.Connection = conexionDB;
                     command.CommandType = CommandType.Text;
                     command.CommandText = "SELECT * FROM Ventas WHERE ID = @ID";
-                    command.Parameters.AddWithValue("@ID", nudIDSells.Text);
+                    command.Parameters.AddWithValue("@ID", cbID.Text);
 
                     OleDbDataReader reader = command.ExecuteReader();
 
@@ -63,13 +62,19 @@ namespace pryVonMuhlinenPP1
                         command2.Connection = conexionDB;
                         command2.CommandType = CommandType.Text;
                         command2.CommandText = "DELETE FROM Ventas WHERE ID = @ID";
-                        command2.Parameters.AddWithValue("@ID", nudIDSells.Text);
+                        command2.Parameters.AddWithValue("@ID", cbID.Text);
 
                         OleDbDataReader reader2 = command2.ExecuteReader();
                         MessageBox.Show("Sell deleted");
                         conexionDB.Close();
                         reader.Close();
                         reader2.Close();
+                        ClsCbSell.table = "Ventas";
+                        ClsCbSell.column = "ID";
+                        ClsCbSell.comboBox = cbID;
+                        cbID.Items.Clear();
+                        cbID.Text = "";
+                        ClsCbSell.ChangeCB();
                     }
                     else
                     {
@@ -90,27 +95,6 @@ namespace pryVonMuhlinenPP1
 
         private void nudIDSells_ValueChanged(object sender, EventArgs e)
         {
-            OleDbConnection conexionDB = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BD.mdb");
-            conexionDB.Open();
-
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = conexionDB;
-            command.CommandType = CommandType.Text;
-            command.CommandText = "SELECT * FROM Ventas WHERE ID = @ID";
-            command.Parameters.AddWithValue("@ID", nudIDSells.Text);
-
-            OleDbDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
-            {
-                cbExists.Enabled = true;
-            }
-            else
-            {
-                cbExists.Enabled = false;
-            }
-
-            conexionDB.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -31,9 +31,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbExists = new System.Windows.Forms.CheckBox();
-            this.nudIDSells = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIDSells)).BeginInit();
+            this.cbID = new System.Windows.Forms.ComboBox();
+            this.btnCheckData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
@@ -68,26 +67,23 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "ID";
             // 
-            // cbExists
+            // cbID
             // 
-            this.cbExists.AutoSize = true;
-            this.cbExists.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cbExists.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbExists.Location = new System.Drawing.Point(83, 104);
-            this.cbExists.Name = "cbExists";
-            this.cbExists.Size = new System.Drawing.Size(68, 20);
-            this.cbExists.TabIndex = 16;
-            this.cbExists.Text = "Exists?";
-            this.cbExists.UseVisualStyleBackColor = false;
+            this.cbID.FormattingEnabled = true;
+            this.cbID.Location = new System.Drawing.Point(193, 49);
+            this.cbID.Name = "cbID";
+            this.cbID.Size = new System.Drawing.Size(121, 21);
+            this.cbID.TabIndex = 15;
             // 
-            // nudIDSells
+            // btnCheckData
             // 
-            this.nudIDSells.Location = new System.Drawing.Point(184, 49);
-            this.nudIDSells.Name = "nudIDSells";
-            this.nudIDSells.Size = new System.Drawing.Size(139, 20);
-            this.nudIDSells.TabIndex = 14;
-            this.nudIDSells.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nudIDSells.ValueChanged += new System.EventHandler(this.nudIDSells_ValueChanged);
+            this.btnCheckData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckData.Location = new System.Drawing.Point(317, 286);
+            this.btnCheckData.Name = "btnCheckData";
+            this.btnCheckData.Size = new System.Drawing.Size(96, 32);
+            this.btnCheckData.TabIndex = 16;
+            this.btnCheckData.Text = "Check Data";
+            this.btnCheckData.UseVisualStyleBackColor = true;
             // 
             // frmDeleteSells
             // 
@@ -95,15 +91,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(696, 361);
-            this.Controls.Add(this.cbExists);
-            this.Controls.Add(this.nudIDSells);
+            this.Controls.Add(this.btnCheckData);
+            this.Controls.Add(this.cbID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Name = "frmDeleteSells";
             this.Text = "frmDeleteSells";
             this.Load += new System.EventHandler(this.frmDeleteSells_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nudIDSells)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,7 +109,7 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox cbExists;
-        private System.Windows.Forms.NumericUpDown nudIDSells;
+        private System.Windows.Forms.ComboBox cbID;
+        private System.Windows.Forms.Button btnCheckData;
     }
 }
