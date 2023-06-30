@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.btnBack = new System.Windows.Forms.Button();
-            this.cbClient = new System.Windows.Forms.ComboBox();
-            this.lblClient = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nudIDSells = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIDSells)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -45,26 +46,6 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // cbClient
-            // 
-            this.cbClient.FormattingEnabled = true;
-            this.cbClient.Location = new System.Drawing.Point(164, 40);
-            this.cbClient.Name = "cbClient";
-            this.cbClient.Size = new System.Drawing.Size(139, 21);
-            this.cbClient.TabIndex = 11;
-            // 
-            // lblClient
-            // 
-            this.lblClient.AutoSize = true;
-            this.lblClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClient.ForeColor = System.Drawing.Color.Black;
-            this.lblClient.Location = new System.Drawing.Point(52, 42);
-            this.lblClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(45, 18);
-            this.lblClient.TabIndex = 10;
-            this.lblClient.Text = "Client";
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +55,25 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(79, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 20);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "ID";
+            // 
+            // nudIDSells
+            // 
+            this.nudIDSells.Location = new System.Drawing.Point(183, 60);
+            this.nudIDSells.Name = "nudIDSells";
+            this.nudIDSells.Size = new System.Drawing.Size(139, 20);
+            this.nudIDSells.TabIndex = 14;
+            this.nudIDSells.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmDeleteSells
             // 
@@ -81,12 +81,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(696, 330);
+            this.Controls.Add(this.nudIDSells);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cbClient);
-            this.Controls.Add(this.lblClient);
             this.Controls.Add(this.btnBack);
             this.Name = "frmDeleteSells";
             this.Text = "frmDeleteSells";
+            this.Load += new System.EventHandler(this.frmDeleteSells_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudIDSells)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,8 +97,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.ComboBox cbClient;
-        private System.Windows.Forms.Label lblClient;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown nudIDSells;
     }
 }

@@ -143,6 +143,44 @@ namespace pryVonMuhlinenPP1
                 MessageBox.Show(err.ToString());
             }
         }
+
+        //public int getClient(string name){
+        //    try
+        //    {
+        //        int id = 0;
+
+        //        OleDbConnection conexionDB;
+
+        //        conexionDB = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BD.mdb");
+        //        conexionDB.Open();
+
+        //        OleDbCommand command = new OleDbCommand();
+
+        //        command.Connection = conexionDB;
+        //        command.CommandType = CommandType.TableDirect;
+        //        command.CommandText = "Clientes";
+
+        //        OleDbDataReader reader = command.ExecuteReader();
+
+        //        while (reader.Read())
+        //        {
+        //            if (reader["Nombre"].ToString() == name)
+        //            {
+        //                id = int.Parse(reader["ID"].ToString());
+        //            }
+        //        }
+        //        conexionDB.Close();
+        //        reader.Close();
+
+        //        return id;
+        //    }
+        //    catch (Exception err)
+        //    {
+        //        MessageBox.Show(err.ToString());
+
+        //        return 0;
+        //    }
+        //}
     }
     
 }

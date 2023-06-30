@@ -36,13 +36,13 @@
             this.consultByDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultGraphicSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.editSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,8 +71,8 @@
             this.sellsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultToolStripMenuItem1,
             this.consultByDateToolStripMenuItem,
-            this.registerToolStripMenuItem1,
             this.consultGraphicSellsToolStripMenuItem,
+            this.registerToolStripMenuItem1,
             this.editSellsToolStripMenuItem,
             this.deleteSellsToolStripMenuItem});
             this.sellsToolStripMenuItem.Name = "sellsToolStripMenuItem";
@@ -106,6 +106,20 @@
             this.consultGraphicSellsToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.consultGraphicSellsToolStripMenuItem.Text = "Consult Graphic Sells";
             this.consultGraphicSellsToolStripMenuItem.Click += new System.EventHandler(this.consultGraphicSellsToolStripMenuItem_Click);
+            // 
+            // editSellsToolStripMenuItem
+            // 
+            this.editSellsToolStripMenuItem.Name = "editSellsToolStripMenuItem";
+            this.editSellsToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.editSellsToolStripMenuItem.Text = "Edit sells";
+            this.editSellsToolStripMenuItem.Click += new System.EventHandler(this.editSellsToolStripMenuItem_Click);
+            // 
+            // deleteSellsToolStripMenuItem
+            // 
+            this.deleteSellsToolStripMenuItem.Name = "deleteSellsToolStripMenuItem";
+            this.deleteSellsToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.deleteSellsToolStripMenuItem.Text = "Delete sells";
+            this.deleteSellsToolStripMenuItem.Click += new System.EventHandler(this.deleteSellsToolStripMenuItem_Click);
             // 
             // clientsToolStripMenuItem
             // 
@@ -146,20 +160,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // editSellsToolStripMenuItem
-            // 
-            this.editSellsToolStripMenuItem.Name = "editSellsToolStripMenuItem";
-            this.editSellsToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.editSellsToolStripMenuItem.Text = "Edit sells";
-            this.editSellsToolStripMenuItem.Click += new System.EventHandler(this.editSellsToolStripMenuItem_Click);
-            // 
-            // deleteSellsToolStripMenuItem
-            // 
-            this.deleteSellsToolStripMenuItem.Name = "deleteSellsToolStripMenuItem";
-            this.deleteSellsToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.deleteSellsToolStripMenuItem.Text = "Delete sells";
-            this.deleteSellsToolStripMenuItem.Click += new System.EventHandler(this.deleteSellsToolStripMenuItem_Click);
             // 
             // frmHome
             // 
