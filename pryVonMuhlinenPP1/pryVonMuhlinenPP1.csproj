@@ -88,6 +88,18 @@
     <Compile Include="frmConsultSells.Designer.cs">
       <DependentUpon>frmConsultSells.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDeleteSells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteSells.Designer.cs">
+      <DependentUpon>frmDeleteSells.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditSells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSells.Designer.cs">
+      <DependentUpon>frmEditSells.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultSells.resx">
       <DependentUpon>frmConsultSells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteSells.resx">
+      <DependentUpon>frmDeleteSells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSells.resx">
+      <DependentUpon>frmEditSells.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>

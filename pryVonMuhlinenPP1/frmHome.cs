@@ -73,5 +73,19 @@ namespace pryVonMuhlinenPP1
         {
 
         }
+
+        private void editSellsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmEditSells frmNew = new frmEditSells();
+            frmNew.ShowDialog();
+        }
+
+        private void deleteSellsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDeleteSells frmNew = new frmDeleteSells();
+            frmNew.ShowDialog();
+        }
     }
 }
