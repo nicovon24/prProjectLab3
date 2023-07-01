@@ -45,7 +45,7 @@
             this.lblClient.AutoSize = true;
             this.lblClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClient.ForeColor = System.Drawing.Color.Black;
-            this.lblClient.Location = new System.Drawing.Point(58, 64);
+            this.lblClient.Location = new System.Drawing.Point(58, 72);
             this.lblClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClient.Name = "lblClient";
             this.lblClient.Size = new System.Drawing.Size(45, 18);
@@ -57,7 +57,7 @@
             this.lblEmployee.AutoSize = true;
             this.lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployee.ForeColor = System.Drawing.Color.Black;
-            this.lblEmployee.Location = new System.Drawing.Point(58, 135);
+            this.lblEmployee.Location = new System.Drawing.Point(58, 143);
             this.lblEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployee.Name = "lblEmployee";
             this.lblEmployee.Size = new System.Drawing.Size(74, 18);
@@ -69,7 +69,7 @@
             this.lblProduct.AutoSize = true;
             this.lblProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProduct.ForeColor = System.Drawing.Color.Black;
-            this.lblProduct.Location = new System.Drawing.Point(384, 62);
+            this.lblProduct.Location = new System.Drawing.Point(384, 70);
             this.lblProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProduct.Name = "lblProduct";
             this.lblProduct.Size = new System.Drawing.Size(60, 18);
@@ -81,7 +81,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(384, 135);
+            this.lblDate.Location = new System.Drawing.Point(384, 143);
             this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(78, 18);
@@ -91,7 +91,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(563, 215);
+            this.btnRegister.Location = new System.Drawing.Point(563, 223);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(100, 28);
@@ -103,7 +103,7 @@
             // cbClient
             // 
             this.cbClient.FormattingEnabled = true;
-            this.cbClient.Location = new System.Drawing.Point(170, 62);
+            this.cbClient.Location = new System.Drawing.Point(170, 70);
             this.cbClient.Name = "cbClient";
             this.cbClient.Size = new System.Drawing.Size(139, 24);
             this.cbClient.TabIndex = 5;
@@ -111,7 +111,7 @@
             // cbEmployee
             // 
             this.cbEmployee.FormattingEnabled = true;
-            this.cbEmployee.Location = new System.Drawing.Point(169, 133);
+            this.cbEmployee.Location = new System.Drawing.Point(169, 141);
             this.cbEmployee.Name = "cbEmployee";
             this.cbEmployee.Size = new System.Drawing.Size(139, 24);
             this.cbEmployee.TabIndex = 6;
@@ -119,7 +119,7 @@
             // cbProduct
             // 
             this.cbProduct.FormattingEnabled = true;
-            this.cbProduct.Location = new System.Drawing.Point(524, 58);
+            this.cbProduct.Location = new System.Drawing.Point(524, 66);
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(139, 24);
             this.cbProduct.TabIndex = 7;
@@ -127,7 +127,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(61, 215);
+            this.btnBack.Location = new System.Drawing.Point(61, 223);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(81, 32);
             this.btnBack.TabIndex = 9;
@@ -139,7 +139,7 @@
             // 
             this.dtpDate.CustomFormat = "dd/MM/yyyy hh:mm";
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDate.Location = new System.Drawing.Point(489, 133);
+            this.dtpDate.Location = new System.Drawing.Point(489, 141);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(174, 22);
             this.dtpDate.TabIndex = 11;
@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(695, 274);
+            this.ClientSize = new System.Drawing.Size(695, 309);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbProduct);

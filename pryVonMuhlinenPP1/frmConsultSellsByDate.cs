@@ -45,11 +45,14 @@ namespace pryVonMuhlinenPP1
                 OleDbDataReader lectorDeConsulta = bringFromDB.ExecuteReader();
 
                 grdSells.Rows.Clear();
+
+                //filling grid
                 while (lectorDeConsulta.Read())
                 {
                     grdSells.Rows.Add(lectorDeConsulta[0], lectorDeConsulta[1]);
                 }
 
+                //none data found
                 if(grdSells.Rows.Count == 1) //*siempre tira 1 por defecto, si hay uno está vacío
                 {
                     MessageBox.Show("No se han encontrado valores entre ambas fechas");

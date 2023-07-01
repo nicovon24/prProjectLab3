@@ -53,10 +53,12 @@ namespace pryVonMuhlinenPP1
             //*ids que van al form
             try
             {
+                //ids
                 int IDClient = ClsCbClient.GetIDForFormulare(cbClient.Text.ToString());
                 int IDEmployee = ClsCbEmployees.GetIDForFormulare(cbEmployee.Text.ToString());
                 int IDProduct = ClsCbProducts.GetIDForFormulare(cbProduct.Text.ToString());
                 
+                //date and time
                 string day = dtpDate.Value.Day.ToString();
                 string month = dtpDate.Value.Month.ToString();
                 string year = dtpDate.Value.Year.ToString();
@@ -67,6 +69,7 @@ namespace pryVonMuhlinenPP1
 
                 DateTime dateForDB = new DateTime(Int32.Parse(year), Int32.Parse(month), Int32.Parse(day));
 
+                //validation
                 if (IDClient != 0 && IDEmployee.ToString() != "" && IDProduct != 0 && date != "")
                 {
                     OleDbConnection dbConnection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + "BD.mdb");

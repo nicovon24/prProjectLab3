@@ -30,8 +30,10 @@ namespace pryVonMuhlinenPP1
         {
             try
             {
+                //validation name and adress
                 if (txtName.Text != "" && txtAdress.Text != "")
                 {
+                    //regex validation
                     if (Regex.IsMatch(txtPhone.Text, regexPhone))
                     {
                         OleDbConnection dbConnection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + "BD.mdb");

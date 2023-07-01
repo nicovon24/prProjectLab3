@@ -129,7 +129,7 @@ namespace pryVonMuhlinenPP1
                         }
                     }
 
-                    //*date only checked
+                    //*date checkbox only checked
                     else if (cbxAllowDate.Checked == true && cbxAllowEmployee.Checked == false)
                     {
                         OleDbCommand command = new OleDbCommand("SELECT * FROM Ventas WHERE FechaVenta >= @StartDate AND FechaVenta <= @EndDate", dbConnection
@@ -140,7 +140,7 @@ namespace pryVonMuhlinenPP1
                         valid = true;
                     }
 
-                    //*employee only checked
+                    //*employee checkbox only checked
                     else if (cbxAllowDate.Checked == false && cbxAllowEmployee.Checked == true)
                     {
                         if (cbEmployee.Text != "")
@@ -157,7 +157,7 @@ namespace pryVonMuhlinenPP1
                         }
                     }
 
-                    //data reading: reading only the data
+                    //filling the grid
                     if (valid == true)
                     {
                         OleDbDataReader lectorDeConsulta = commandResult.ExecuteReader();

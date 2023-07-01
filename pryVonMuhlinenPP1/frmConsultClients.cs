@@ -35,7 +35,7 @@ namespace pryVonMuhlinenPP1
                 //data reading: reading only the data
                 OleDbDataReader lectorDeConsulta = bringFromDB.ExecuteReader();
 
-                //we add the 
+                //we add the data to the grdClients
                 while (lectorDeConsulta.Read())
                 {
                     grdClients.Rows.Add(lectorDeConsulta[1], lectorDeConsulta[2], lectorDeConsulta[3]);
