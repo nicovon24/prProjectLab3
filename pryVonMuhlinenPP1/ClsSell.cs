@@ -17,13 +17,14 @@ namespace pryVonMuhlinenPP1
         public OleDbDataReader lectorSells;
         public Button lblCounterRes;
 
-        public void FillGrid()
+        public int FillGrid()
         {
             //*getting product name
 
             OleDbConnection conexionDB = new OleDbConnection(accessURL + "BD.mdb");
             conexionDB.Open();
             int counter = 0;
+            int totalIncome = 0;
 
             while (lectorSells.Read())
             {
@@ -50,6 +51,7 @@ namespace pryVonMuhlinenPP1
                     {
                         producto = lectorProducts["Nombre"].ToString();
                         price = int.Parse(lectorProducts["Precio"].ToString());
+                        totalIncome += price;
                     }
                 }
 
@@ -103,9 +105,11 @@ namespace pryVonMuhlinenPP1
             lblCounterRes.Text = counter.ToString();
 
             conexionDB.Close();
+
+            return totalIncome;
         }
 
-        public void getInitialGrid()
+        public int getInitialGrid()
         {
             grdSells.Rows.Clear();
 
@@ -135,14 +139,17 @@ namespace pryVonMuhlinenPP1
                 ClsNewSell.lectorSells = lectorSells;
                 ClsNewSell.lblCounterRes = lblCounterRes;
 
-                ClsNewSell.FillGrid(); //*calling the method grid
+                int price = ClsNewSell.FillGrid(); //*calling the method grid
 
                 lectorSells.Close();
                 dbConnection.Close();
+
+                return price;
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.ToString());
+                return 0;
             }
         }
 

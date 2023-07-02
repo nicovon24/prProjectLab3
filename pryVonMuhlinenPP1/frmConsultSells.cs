@@ -51,7 +51,9 @@ namespace pryVonMuhlinenPP1
                 ClsNewSell.lectorSells = lectorSells;
                 ClsNewSell.lblCounterRes = lblCounterRes;
 
-                ClsNewSell.FillGrid(); //*calling the method grid
+                int income = ClsNewSell.FillGrid(); //*calling the method grid
+
+                btnIncome.Text = $"${income}";
 
                 lectorSells.Close();
                 dbConnection.Close();
@@ -169,7 +171,9 @@ namespace pryVonMuhlinenPP1
                         ClsNewSell2.lectorSells = lectorDeConsulta;
                         ClsNewSell2.lblCounterRes = lblCounterRes;
 
-                        ClsNewSell2.FillGrid();
+                        int income = ClsNewSell2.FillGrid();
+
+                        btnIncome.Text = $"${income}";
 
                         lectorDeConsulta.Close();
                     }
@@ -227,7 +231,8 @@ namespace pryVonMuhlinenPP1
             dtpDate.Value = DateTime.Today;
             dtpEndDate.Value = DateTime.Today;
             grdSells.Rows.Clear();
-            ClsNewSell.getInitialGrid();
+            int income = ClsNewSell.getInitialGrid();
+            btnIncome.Text = $"${income}";
         }
     }
 }
