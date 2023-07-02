@@ -36,8 +36,8 @@
             this.gbData = new System.Windows.Forms.GroupBox();
             this.lblClientRes = new System.Windows.Forms.Label();
             this.lblProductRes = new System.Windows.Forms.Label();
-            this.lblAdress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.lblAdress = new System.Windows.Forms.Label();
             this.gbDelete = new System.Windows.Forms.GroupBox();
             this.gbData.SuspendLayout();
             this.gbDelete.SuspendLayout();
@@ -82,6 +82,8 @@
             this.cbID.Name = "cbID";
             this.cbID.Size = new System.Drawing.Size(121, 26);
             this.cbID.TabIndex = 15;
+            this.cbID.SelectedIndexChanged += new System.EventHandler(this.cbID_SelectedIndexChanged);
+            this.cbID.SelectedValueChanged += new System.EventHandler(this.cbID_SelectedValueChanged);
             // 
             // btnCheckData
             // 
@@ -129,6 +131,16 @@
             this.lblProductRes.Size = new System.Drawing.Size(121, 18);
             this.lblProductRes.TabIndex = 25;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(40, 48);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(53, 16);
+            this.lblName.TabIndex = 23;
+            this.lblName.Text = "Product";
+            // 
             // lblAdress
             // 
             this.lblAdress.AutoSize = true;
@@ -139,16 +151,6 @@
             this.lblAdress.Size = new System.Drawing.Size(40, 16);
             this.lblAdress.TabIndex = 24;
             this.lblAdress.Text = "Client";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(40, 48);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(53, 16);
-            this.lblName.TabIndex = 23;
-            this.lblName.Text = "Product";
             // 
             // gbDelete
             // 

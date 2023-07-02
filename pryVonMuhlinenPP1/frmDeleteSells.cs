@@ -65,7 +65,7 @@ namespace pryVonMuhlinenPP1
                         command2.Parameters.AddWithValue("@ID", cbID.Text);
 
                         OleDbDataReader reader2 = command2.ExecuteReader();
-                        MessageBox.Show("Sell deleted");
+                        MessageBox.Show("Sell deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conexionDB.Close();
                         reader.Close();
                         reader2.Close();
@@ -82,7 +82,7 @@ namespace pryVonMuhlinenPP1
                     }
                     else
                     {
-                        MessageBox.Show("Sell could not be found");
+                        MessageBox.Show("Sell could not be found", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     }
                 }
                 catch (Exception err)
@@ -191,6 +191,15 @@ namespace pryVonMuhlinenPP1
             {
                 MessageBox.Show("Data missing");
             }
+        }
+
+        private void cbID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbID_SelectedValueChanged(object sender, EventArgs e)
+        {
         }
     }
 }

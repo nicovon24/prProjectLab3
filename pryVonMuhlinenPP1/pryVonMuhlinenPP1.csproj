@@ -100,6 +100,12 @@
     <Compile Include="frmDeleteSells.Designer.cs">
       <DependentUpon>frmDeleteSells.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditProducts.Designer.cs">
+      <DependentUpon>frmEditProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeleteSells.resx">
       <DependentUpon>frmDeleteSells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditProducts.resx">
+      <DependentUpon>frmEditProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
