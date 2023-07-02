@@ -116,6 +116,7 @@
             this.Controls.Add(this.btnBack);
             this.Name = "frmRegisterProducts";
             this.Text = "Reigister products";
+            this.Load += new System.EventHandler(this.frmRegisterProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

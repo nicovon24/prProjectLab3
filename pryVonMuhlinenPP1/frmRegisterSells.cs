@@ -82,7 +82,7 @@ namespace pryVonMuhlinenPP1
                     comando.CommandText = "INSERT INTO VENTAS (IDProducto, IDCliente, IDEmpleado, HoraVenta, FechaVenta)" +
                     " VALUES('" + IDProduct + "','" + IDClient + "','" + IDEmployee + "','" + time + "','" + dateForDB + "')";
                     comando.ExecuteNonQuery();
-                    MessageBox.Show("Sell registered");
+                    MessageBox.Show("Sell registered", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dbConnection.Close();
                     cbClient.Text = ""; cbEmployee.Text = ""; cbProduct.Text = "";
                     cbClient.Focus();
@@ -90,7 +90,7 @@ namespace pryVonMuhlinenPP1
 
                 else
                 {
-                    MessageBox.Show("¡Mal!");
+                    MessageBox.Show("Must fill all the data from the form", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
             catch(Exception error)

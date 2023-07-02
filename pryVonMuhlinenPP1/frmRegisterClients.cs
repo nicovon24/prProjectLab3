@@ -48,19 +48,19 @@ namespace pryVonMuhlinenPP1
                         comando.CommandText = "INSERT INTO CLIENTES (Nombre, Domicilio, Teléfono)" +
                         " VALUES('" + varName + "','" + varAdress + "','" + varPhone + "')";
                         comando.ExecuteNonQuery();
-                        MessageBox.Show("Client registered");
+                        MessageBox.Show("Client registered", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dbConnection.Close();
                         txtName.Text = ""; txtAdress.Text = ""; txtPhone.Text = "";
                         txtName.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("Phone must be for example +5493512007668!", "Hey!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Phone must be for example +5493512007668!", "Hey!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Fill out name and adress, please!", "Missing info!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Fill out name and adress, please!", "Missing info!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
             catch (Exception err)

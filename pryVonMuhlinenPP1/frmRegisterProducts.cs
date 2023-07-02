@@ -44,20 +44,25 @@ namespace pryVonMuhlinenPP1
                         comando.CommandText = "INSERT INTO Productos (Nombre, Precio)" +
                         " VALUES('" + txtName.Text + "'," + int.Parse(nudPrice.Value.ToString()) + ")";
                         comando.ExecuteNonQuery();
-                        MessageBox.Show("Product registered");
+                        MessageBox.Show("Product registered", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dbConnection.Close();
                         txtName.Text = ""; nudPrice.Text = "0";
                         txtName.Focus();
                 }
                 else
                 {
-                    MessageBox.Show("Fill out name and adress, please!", "Missing info!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Fill out name and price, please!", "Missing info!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.ToString());
             }
+        }
+
+        private void frmRegisterProducts_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
