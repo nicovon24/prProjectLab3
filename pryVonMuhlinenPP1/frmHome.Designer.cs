@@ -34,15 +34,18 @@
             this.sellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultByDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultGraphicSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.registerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +55,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.welcomeToolStripMenuItem,
             this.sellsToolStripMenuItem,
-            this.clientsToolStripMenuItem});
+            this.clientsToolStripMenuItem,
+            this.productsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(372, 24);
@@ -73,7 +77,6 @@
             this.consultByDateToolStripMenuItem,
             this.consultGraphicSellsToolStripMenuItem,
             this.registerToolStripMenuItem1,
-            this.editSellsToolStripMenuItem,
             this.deleteSellsToolStripMenuItem});
             this.sellsToolStripMenuItem.Name = "sellsToolStripMenuItem";
             this.sellsToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
@@ -93,13 +96,6 @@
             this.consultByDateToolStripMenuItem.Text = "Consult by date";
             this.consultByDateToolStripMenuItem.Click += new System.EventHandler(this.consultByDateToolStripMenuItem_Click);
             // 
-            // registerToolStripMenuItem1
-            // 
-            this.registerToolStripMenuItem1.Name = "registerToolStripMenuItem1";
-            this.registerToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
-            this.registerToolStripMenuItem1.Text = "Register";
-            this.registerToolStripMenuItem1.Click += new System.EventHandler(this.registerToolStripMenuItem1_Click);
-            // 
             // consultGraphicSellsToolStripMenuItem
             // 
             this.consultGraphicSellsToolStripMenuItem.Name = "consultGraphicSellsToolStripMenuItem";
@@ -107,12 +103,12 @@
             this.consultGraphicSellsToolStripMenuItem.Text = "Consult Graphic Sells";
             this.consultGraphicSellsToolStripMenuItem.Click += new System.EventHandler(this.consultGraphicSellsToolStripMenuItem_Click);
             // 
-            // editSellsToolStripMenuItem
+            // registerToolStripMenuItem1
             // 
-            this.editSellsToolStripMenuItem.Name = "editSellsToolStripMenuItem";
-            this.editSellsToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.editSellsToolStripMenuItem.Text = "Edit sells";
-            this.editSellsToolStripMenuItem.Click += new System.EventHandler(this.editSellsToolStripMenuItem_Click);
+            this.registerToolStripMenuItem1.Name = "registerToolStripMenuItem1";
+            this.registerToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
+            this.registerToolStripMenuItem1.Text = "Register";
+            this.registerToolStripMenuItem1.Click += new System.EventHandler(this.registerToolStripMenuItem1_Click);
             // 
             // deleteSellsToolStripMenuItem
             // 
@@ -144,6 +140,23 @@
             this.registerToolStripMenuItem.Text = "Register";
             this.registerToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
+            // productsToolStripMenuItem
+            // 
+            this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultToolStripMenuItem2,
+            this.registerToolStripMenuItem2,
+            this.editToolStripMenuItem});
+            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
+            this.productsToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.productsToolStripMenuItem.Text = "Products";
+            // 
+            // consultToolStripMenuItem2
+            // 
+            this.consultToolStripMenuItem2.Name = "consultToolStripMenuItem2";
+            this.consultToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.consultToolStripMenuItem2.Text = "Consult";
+            this.consultToolStripMenuItem2.Click += new System.EventHandler(this.consultToolStripMenuItem2_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -160,6 +173,19 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // registerToolStripMenuItem2
+            // 
+            this.registerToolStripMenuItem2.Name = "registerToolStripMenuItem2";
+            this.registerToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.registerToolStripMenuItem2.Text = "Register";
+            this.registerToolStripMenuItem2.Click += new System.EventHandler(this.registerToolStripMenuItem2_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Text = "Edit";
             // 
             // frmHome
             // 
@@ -195,7 +221,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem consultByDateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultGraphicSellsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editSellsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteSellsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem registerToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
     }
 }

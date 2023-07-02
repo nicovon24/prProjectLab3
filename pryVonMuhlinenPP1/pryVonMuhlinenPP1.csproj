@@ -70,6 +70,12 @@
     <Compile Include="frmChartSells.Designer.cs">
       <DependentUpon>frmChartSells.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultProducts.Designer.cs">
+      <DependentUpon>frmConsultProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConsultSellsByDate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +100,6 @@
     <Compile Include="frmDeleteSells.Designer.cs">
       <DependentUpon>frmDeleteSells.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditSells.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditSells.Designer.cs">
-      <DependentUpon>frmEditSells.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +112,12 @@
     <Compile Include="frmRegisterClients.Designer.cs">
       <DependentUpon>frmRegisterClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegisterProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterProducts.Designer.cs">
+      <DependentUpon>frmRegisterProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegisterSells.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmChartSells.resx">
       <DependentUpon>frmChartSells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultProducts.resx">
+      <DependentUpon>frmConsultProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultSellsByDate.resx">
       <DependentUpon>frmConsultSellsByDate.cs</DependentUpon>
@@ -135,14 +144,14 @@
     <EmbeddedResource Include="frmDeleteSells.resx">
       <DependentUpon>frmDeleteSells.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditSells.resx">
-      <DependentUpon>frmEditSells.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterClients.resx">
       <DependentUpon>frmRegisterClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterProducts.resx">
+      <DependentUpon>frmRegisterProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterSells.resx">
       <DependentUpon>frmRegisterSells.cs</DependentUpon>

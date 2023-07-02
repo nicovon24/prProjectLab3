@@ -95,7 +95,7 @@ namespace pryVonMuhlinenPP1
                 if (Int32.Parse(minute) < 10) { timeFinal += "0" + minute; }
                 else { timeFinal += minute; }
 
-                grdSells.Rows.Add(producto, client, dateFinal, timeFinal, price);
+                grdSells.Rows.Add(producto, client, dateFinal, timeFinal, $"${price}");
 
                 lectorClients.Close();
 
