@@ -41,6 +41,7 @@ namespace pryVonMuhlinenPP1
                 OleDbDataReader lectorProducts = bringProducts.ExecuteReader();
 
                 string producto = "";
+                int price = 0;
 
                 while (lectorProducts.Read())
                 {
@@ -48,6 +49,7 @@ namespace pryVonMuhlinenPP1
                     if (lectorProducts["ID"].ToString() == lectorSells["IDProducto"].ToString())
                     {
                         producto = lectorProducts["Nombre"].ToString();
+                        price = int.Parse(lectorProducts["Precio"].ToString());
                     }
                 }
 
@@ -91,9 +93,9 @@ namespace pryVonMuhlinenPP1
                 if (Int32.Parse(minute) < 10) { timeFinal += "0" + minute; }
                 else { timeFinal += minute; }
 
-                lectorClients.Close();
+                grdSells.Rows.Add(producto, client, dateFinal, timeFinal, price);
 
-                grdSells.Rows.Add(producto, client, dateFinal, timeFinal);
+                lectorClients.Close();
 
                 counter++;
             }
