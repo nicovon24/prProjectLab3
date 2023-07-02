@@ -87,13 +87,44 @@ namespace pryVonMuhlinenPP1
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if(initialName!=txtName.Text || initialPrice != int.Parse(nudPrice.Text))
+            if (initialName != txtName.Text || initialPrice != Convert.ToInt32(nudPrice.Value))
             {
-                MessageBox.Show("Data edited", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BD.mdb";
+                    using (OleDbConnection connection = new OleDbConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string updateQuery = "UPDATE Productos SET Nombre = @Name, Precio = @Price WHERE Id = @Id";
+                        using (OleDbCommand updateCommand = new OleDbCommand(updateQuery, connection))
+                        {
+                            updateCommand.Parameters.AddWithValue("@Name", txtName.Text);
+                            updateCommand.Parameters.AddWithValue("@Price", int.Parse(nudPrice.Text));
+                            updateCommand.Parameters.AddWithValue("@Id", int.Parse(cbID.Text));
+                            int rowsAffected = updateCommand.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Data edited", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                txtName.Text = ""; nudPrice.Value = 0; cbID.Text = "";
+                                txtName.Focus();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Record could not be found");
+                            }
+                        }
+                    }
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.ToString());
+                }
             }
             else
             {
-                MessageBox.Show("None data edited", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("No data edited", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
     }
