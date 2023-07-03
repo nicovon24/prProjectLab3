@@ -163,7 +163,7 @@
             this.gbDelete.Size = new System.Drawing.Size(383, 363);
             this.gbDelete.TabIndex = 27;
             this.gbDelete.TabStop = false;
-            this.gbDelete.Text = "Delete data";
+            this.gbDelete.Text = "Delete sell";
             // 
             // frmDeleteSells
             // 

@@ -105,5 +105,12 @@ namespace pryVonMuhlinenPP1
             frmEditProducts frmNew = new frmEditProducts();
             frmNew.ShowDialog();
         }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDeleteClient frmNew = new frmDeleteClient();
+            frmNew.ShowDialog();
+        }
     }
 }

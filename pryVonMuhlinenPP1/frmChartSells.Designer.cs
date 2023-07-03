@@ -42,7 +42,7 @@
             // 
             // chrtSells
             // 
-            this.chrtSells.Location = new System.Drawing.Point(21, 22);
+            this.chrtSells.Location = new System.Drawing.Point(31, 43);
             this.chrtSells.Name = "chrtSells";
             this.chrtSells.Size = new System.Drawing.Size(1023, 480);
             this.chrtSells.TabIndex = 2;
@@ -52,7 +52,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(31, 533);
+            this.btnBack.Location = new System.Drawing.Point(31, 550);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(81, 32);
             this.btnBack.TabIndex = 8;
@@ -64,11 +64,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 598);
+            this.ClientSize = new System.Drawing.Size(1083, 712);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.chrtSells);
             this.Name = "frmChartSells";
-            this.Text = "Sells year Graphic";
+            this.Text = "Total income per month (graphic)";
             this.Load += new System.EventHandler(this.frmChartSells_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartBindSource)).EndInit();
             this.ResumeLayout(false);

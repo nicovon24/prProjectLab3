@@ -27,14 +27,19 @@ namespace pryVonMuhlinenPP1
             dbConnection.Open();
 
             //getting data from the db
-            OleDbCommand bringFromDB = new OleDbCommand("SELECT MonthOfTheYear, COUNT(*) AS TotalCount " +
-                                            "FROM (SELECT MONTH(FechaVenta) AS MonthOfTheYear FROM Ventas) AS Subquery " +
+            //OleDbCommand numberOfSellsFromDB = new OleDbCommand("SELECT MonthOfTheYear, COUNT(*) AS TotalCount " +
+            //                                "FROM (SELECT MONTH(FechaVenta) AS MonthOfTheYear FROM Ventas) AS Subquery " +
+            //                                "GROUP BY MonthOfTheYear",
+            //                                dbConnection);
+
+            OleDbCommand sellsFromDB = new OleDbCommand("SELECT MonthOfTheYear, SUM(p.Precio) AS TotalPrice " +
+                                            "FROM (SELECT MONTH(FechaVenta) AS MonthOfTheYear, IDProducto FROM Ventas) AS Subquery " +
+                                            "INNER JOIN Productos AS p ON Subquery.IDProducto = p.ID " +
                                             "GROUP BY MonthOfTheYear",
                                             dbConnection);
-            Console.WriteLine(bringFromDB);
 
             //data reading: reading only the data
-            OleDbDataReader lectorDeConsulta = bringFromDB.ExecuteReader();
+            OleDbDataReader lectorDeConsulta = sellsFromDB.ExecuteReader();
 
             ChartValues<int> arr = new ChartValues<int>();
             Dictionary<string, int> myDictionary = new Dictionary<string, int>();
@@ -61,6 +66,7 @@ namespace pryVonMuhlinenPP1
             dictionaryMonths.Add("12", "December");
 
             int i = 1;
+
             int j = 0;
             foreach (var month in dictionaryMonths.Keys)
             {
