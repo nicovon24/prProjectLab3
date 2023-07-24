@@ -162,7 +162,7 @@
             this.Controls.Add(this.gbDelete);
             this.Controls.Add(this.btnBack);
             this.Name = "frmEditProducts";
-            this.Text = "frmEditProducts";
+            this.Text = "Edit Products";
             this.Load += new System.EventHandler(this.frmEditProducts_Load);
             this.Data.ResumeLayout(false);
             this.Data.PerformLayout();

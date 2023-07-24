@@ -17,33 +17,39 @@ namespace pryVonMuhlinenPP1
         public frmConsultProducts()
         {
             InitializeComponent();
-            try
-            {
-                OleDbConnection dbConnection = new OleDbConnection(accessURL + "BD.mdb");
-                    dbConnection.Open();
+            ClsConsult cls = new ClsConsult();
+            cls.Table = "Productos";
+            cls.NumCols = 2;
+            cls.grd = grdProducts;
+            cls.ConsultFillGrid();
 
-                //getting data from the db
-                OleDbCommand bringFromDB = new OleDbCommand();
+            //try
+            //{
+            //    OleDbConnection dbConnection = new OleDbConnection(accessURL + "BD.mdb");
+            //        dbConnection.Open();
 
-                bringFromDB.Connection = dbConnection; //connecting .net with the DB
-                bringFromDB.CommandType = CommandType.TableDirect; //getting the data from a table
-                bringFromDB.CommandText = "Productos"; //name of the table
+            //    //getting data from the db
+            //    OleDbCommand bringFromDB = new OleDbCommand();
 
-                //data reading: reading only the data
-                OleDbDataReader lectorDeConsulta = bringFromDB.ExecuteReader();
+            //    bringFromDB.Connection = dbConnection; //connecting .net with the DB
+            //    bringFromDB.CommandType = CommandType.TableDirect; //getting the data from a table
+            //    bringFromDB.CommandText = "Productos"; //name of the table
 
-                //we add the data to the grdClients
-                while (lectorDeConsulta.Read())
-                {
-                    grdProducts.Rows.Add(lectorDeConsulta[1], $"${lectorDeConsulta[2]}");
-                }
+            //    //data reading: reading only the data
+            //    OleDbDataReader lectorDeConsulta = bringFromDB.ExecuteReader();
 
-                dbConnection.Close();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.ToString());
-            }
+            //    //we add the data to the grdClients
+            //    while (lectorDeConsulta.Read())
+            //    {
+            //        grdProducts.Rows.Add(lectorDeConsulta[1], $"${lectorDeConsulta[2]}");
+            //    }
+
+            //    dbConnection.Close();
+            //}
+            //catch (Exception err)
+            //{
+            //    MessageBox.Show(err.ToString());
+            //}
 
         }
 

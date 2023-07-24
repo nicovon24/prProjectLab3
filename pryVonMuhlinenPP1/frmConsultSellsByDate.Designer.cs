@@ -187,7 +187,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.grdSells);
             this.Name = "frmConsultSellsByDate";
-            this.Text = "Consult Cells By Date";
+            this.Text = "Consult Sells By Date";
             this.Load += new System.EventHandler(this.frmConsultSellsByDate_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

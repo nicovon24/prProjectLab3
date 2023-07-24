@@ -19,7 +19,6 @@ namespace pryVonMuhlinenPP1
 
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmRegisterClients frmNew = new frmRegisterClients();
             frmNew.ShowDialog();
         }
@@ -31,7 +30,6 @@ namespace pryVonMuhlinenPP1
 
         private void consultToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmConsultClients frmNew = new frmConsultClients();
             frmNew.ShowDialog();
         }
@@ -43,28 +41,24 @@ namespace pryVonMuhlinenPP1
 
         private void registerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmRegisterSells frmNew = new frmRegisterSells();
             frmNew.ShowDialog();
         }
 
         private void consultToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmConsultSells frmNew = new frmConsultSells();
             frmNew.ShowDialog();
         }
 
         private void consultByDateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmConsultSellsByDate frmNew = new frmConsultSellsByDate();
             frmNew.ShowDialog();
         }
 
         private void consultGraphicSellsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmChartSells frmNew = new frmChartSells();
             frmNew.ShowDialog();
         }
@@ -80,36 +74,37 @@ namespace pryVonMuhlinenPP1
 
         private void deleteSellsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmDeleteSells frmNew = new frmDeleteSells();
             frmNew.ShowDialog();
         }
 
         private void consultToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmConsultProducts frmNew = new frmConsultProducts();
             frmNew.ShowDialog();
         }
 
         private void registerToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmRegisterProducts frmNew = new frmRegisterProducts();
             frmNew.ShowDialog();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmEditProducts frmNew = new frmEditProducts();
             frmNew.ShowDialog();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmDeleteClient frmNew = new frmDeleteClient();
+            frmNew.ShowDialog();
+        }
+
+        private void deleteProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDeleteProduct frmNew = new frmDeleteProduct();
             frmNew.ShowDialog();
         }
     }

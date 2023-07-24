@@ -175,7 +175,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnBack);
             this.Name = "frmDeleteSells";
-            this.Text = "frmDeleteSells";
+            this.Text = "Delete Sells";
             this.Load += new System.EventHandler(this.frmDeleteSells_Load);
             this.gbData.ResumeLayout(false);
             this.gbData.PerformLayout();

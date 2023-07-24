@@ -45,6 +45,7 @@
             this.consultToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -60,7 +61,7 @@
             this.productsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(441, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(619, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -131,21 +132,21 @@
             // consultToolStripMenuItem
             // 
             this.consultToolStripMenuItem.Name = "consultToolStripMenuItem";
-            this.consultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.consultToolStripMenuItem.Text = "Consult clients";
             this.consultToolStripMenuItem.Click += new System.EventHandler(this.consultToolStripMenuItem_Click);
             // 
             // registerToolStripMenuItem
             // 
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            this.registerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registerToolStripMenuItem.Text = "Register client";
             this.registerToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem.Text = "Delete client";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -154,7 +155,8 @@
             this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultToolStripMenuItem2,
             this.registerToolStripMenuItem2,
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.deleteProductToolStripMenuItem});
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.productsToolStripMenuItem.Text = "Products";
@@ -162,23 +164,30 @@
             // consultToolStripMenuItem2
             // 
             this.consultToolStripMenuItem2.Name = "consultToolStripMenuItem2";
-            this.consultToolStripMenuItem2.Size = new System.Drawing.Size(166, 22);
+            this.consultToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.consultToolStripMenuItem2.Text = "Consult products";
             this.consultToolStripMenuItem2.Click += new System.EventHandler(this.consultToolStripMenuItem2_Click);
             // 
             // registerToolStripMenuItem2
             // 
             this.registerToolStripMenuItem2.Name = "registerToolStripMenuItem2";
-            this.registerToolStripMenuItem2.Size = new System.Drawing.Size(166, 22);
+            this.registerToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.registerToolStripMenuItem2.Text = "Register products";
             this.registerToolStripMenuItem2.Click += new System.EventHandler(this.registerToolStripMenuItem2_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editToolStripMenuItem.Text = "Edit products";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteProductToolStripMenuItem
+            // 
+            this.deleteProductToolStripMenuItem.Name = "deleteProductToolStripMenuItem";
+            this.deleteProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteProductToolStripMenuItem.Text = "Delete product";
+            this.deleteProductToolStripMenuItem.Click += new System.EventHandler(this.deleteProductToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -191,7 +200,7 @@
             this.pictureBox1.Image = global::pryVonMuhlinenPP1.Properties.Resources._1140_ice_cream_cones_esp_imgcache_rev_web_1000_574;
             this.pictureBox1.Location = new System.Drawing.Point(0, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(451, 294);
+            this.pictureBox1.Size = new System.Drawing.Size(619, 446);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -202,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(441, 315);
+            this.ClientSize = new System.Drawing.Size(619, 470);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -237,5 +246,6 @@
         private System.Windows.Forms.ToolStripMenuItem registerToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteProductToolStripMenuItem;
     }
 }
