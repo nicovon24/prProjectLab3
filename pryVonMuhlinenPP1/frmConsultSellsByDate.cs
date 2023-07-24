@@ -134,15 +134,14 @@ namespace pryVonMuhlinenPP1
                     //data will be always below in the docs
 
                     //headers of each report´s column
-                    e.Graphics.DrawString("Fecha", font_title, Brushes.Black, 50, y - 35);
-                    e.Graphics.DrawString("Contador", font_headers, Brushes.Black, 50, y - 15);
+                    e.Graphics.DrawString($"Fecha y hora de ventas de la fecha seleccionada", font_title, Brushes.Black, 50, y - 35);
 
                     //report table´s content
                     //we do not add barrios, bcs it is not so important
                     while (readerClientes.Read())
                     { //adding data: content, font, color, position in eje x, position in eje y
                         e.Graphics.DrawString(readerClientes[0].ToString(), font_normal, Brushes.Black, 50, y);
-                        e.Graphics.DrawString(readerClientes[1].ToString(), font_normal, Brushes.Black, 120, y);
+                        e.Graphics.DrawString(readerClientes[1].ToString(), font_normal, Brushes.Black, 150, y);
                         y += 15;
                     }
                     readerClientes.Close();

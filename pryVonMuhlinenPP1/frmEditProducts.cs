@@ -24,7 +24,7 @@ namespace pryVonMuhlinenPP1
             InitializeComponent();
             //*getting clients comboboxed
             ClsCbSell.table = "Productos";
-            ClsCbSell.column = "ID";
+            ClsCbSell.column = "Nombre";
             ClsCbSell.comboBox = cbID;
             ClsCbSell.ChangeCB();
         }
@@ -55,7 +55,7 @@ namespace pryVonMuhlinenPP1
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = conexionDB;
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "SELECT * FROM Productos WHERE ID = @ID";
+                    command.CommandText = "SELECT * FROM Productos WHERE Nombre = @ID";
                     command.Parameters.AddWithValue("@ID", cbID.Text);
 
                     OleDbDataReader reader = command.ExecuteReader();
@@ -96,12 +96,12 @@ namespace pryVonMuhlinenPP1
                     {
                         connection.Open();
 
-                        string updateQuery = "UPDATE Productos SET Nombre = @Name, Precio = @Price WHERE Id = @Id";
+                        string updateQuery = "UPDATE Productos SET Nombre = @Name, Precio = @Price WHERE Nombre = @Id";
                         using (OleDbCommand updateCommand = new OleDbCommand(updateQuery, connection))
                         {
                             updateCommand.Parameters.AddWithValue("@Name", txtName.Text);
                             updateCommand.Parameters.AddWithValue("@Price", int.Parse(nudPrice.Text));
-                            updateCommand.Parameters.AddWithValue("@Id", int.Parse(cbID.Text));
+                            updateCommand.Parameters.AddWithValue("@Id", cbID.Text);
                             int rowsAffected = updateCommand.ExecuteNonQuery();
 
                             if (rowsAffected > 0)

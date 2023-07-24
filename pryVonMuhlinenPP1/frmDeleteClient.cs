@@ -19,7 +19,7 @@ namespace pryVonMuhlinenPP1
             InitializeComponent();
             //*getting clients comboboxed
             ClsCbSell.table = "Clientes";
-            ClsCbSell.column = "ID";
+            ClsCbSell.column = "Nombre";
             ClsCbSell.comboBox = cbID;
             ClsCbSell.ChangeCB();
         }
@@ -41,8 +41,8 @@ namespace pryVonMuhlinenPP1
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = conexionDB;
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "SELECT * FROM Clientes WHERE ID = @ID";
-                    command.Parameters.AddWithValue("@ID", cbID.Text);
+                    command.CommandText = "SELECT * FROM Clientes WHERE Nombre = @Nombre";
+                    command.Parameters.AddWithValue("@Nombre", cbID.Text);
                     OleDbDataReader reader = command.ExecuteReader();
 
                     string name = "";
@@ -51,7 +51,6 @@ namespace pryVonMuhlinenPP1
                     if (reader.Read())
                     {
                         name = reader["Nombre"].ToString();
-                        lblNameRes.Text = name;
                     }
                     else
                     {
@@ -85,8 +84,8 @@ namespace pryVonMuhlinenPP1
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = conexionDB;
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "SELECT * FROM Clientes WHERE ID = @ID";
-                    command.Parameters.AddWithValue("@ID", cbID.Text);
+                    command.CommandText = "SELECT * FROM Clientes WHERE Nombre = @Nombre";
+                    command.Parameters.AddWithValue("@Nombre", cbID.Text);
 
                     OleDbDataReader reader = command.ExecuteReader();
 
@@ -98,7 +97,7 @@ namespace pryVonMuhlinenPP1
                         commandDeleteFromVentas.Connection = conexionDB;
                         commandDeleteFromVentas.CommandType = CommandType.Text;
                         commandDeleteFromVentas.CommandText = "DELETE FROM Ventas WHERE IDCliente = @ID";
-                        commandDeleteFromVentas.Parameters.AddWithValue("@ID", cbID.Text);
+                        commandDeleteFromVentas.Parameters.AddWithValue("@ID", reader["ID"]);
                         commandDeleteFromVentas.ExecuteNonQuery();
 
 
@@ -106,7 +105,7 @@ namespace pryVonMuhlinenPP1
                         OleDbCommand commandDeleteClient = new OleDbCommand();
                         commandDeleteClient.Connection = conexionDB;
                         commandDeleteClient.CommandType = CommandType.Text;
-                        commandDeleteClient.CommandText = "DELETE FROM Clientes WHERE ID = @ID";
+                        commandDeleteClient.CommandText = "DELETE FROM Clientes WHERE Nombre = @ID";
                         commandDeleteClient.Parameters.AddWithValue("@ID", cbID.Text);
                         OleDbDataReader reader2 = commandDeleteClient.ExecuteReader();
 
@@ -116,15 +115,12 @@ namespace pryVonMuhlinenPP1
                         reader.Close();
                         reader2.Close();
                         ClsCbSell.table = "Clientes";
-                        ClsCbSell.column = "ID";
+                        ClsCbSell.column = "Nombre";
                         cbID.Text = "";
 
                         ClsCbSell.comboBox = cbID;
                         cbID.Items.Clear();
                         ClsCbSell.ChangeCB();
-
-                        lblNameRes.Text = "";
-                        lblNameRes.Focus();
                     }
                     else
                     {
