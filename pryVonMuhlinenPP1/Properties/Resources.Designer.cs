@@ -73,6 +73,16 @@ namespace pryVonMuhlinenPP1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ice_cream_cone_ice_cream {
+            get {
+                object obj = ResourceManager.GetObject("ice-cream-cone-ice-cream", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mayo {
             get {
                 object obj = ResourceManager.GetObject("mayo", resourceCulture);

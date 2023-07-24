@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Imaging;
+using WpfAnimatedGif;
 
 namespace pryVonMuhlinenPP1
 {
@@ -106,6 +108,11 @@ namespace pryVonMuhlinenPP1
         {
             frmDeleteProduct frmNew = new frmDeleteProduct();
             frmNew.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBack = new System.Windows.Forms.Button();
             this.grdSells = new System.Windows.Forms.DataGridView();
             this.colAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.lblEndDate = new System.Windows.Forms.Label();
@@ -47,9 +49,11 @@
             this.cbEmployee = new System.Windows.Forms.ComboBox();
             this.lblCounterRes = new System.Windows.Forms.Button();
             this.lblCounter = new System.Windows.Forms.Label();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblIncome = new System.Windows.Forms.Label();
             this.btnIncome = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnIncomeRes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdSells)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +81,7 @@
             this.colPrice});
             this.grdSells.Location = new System.Drawing.Point(22, 239);
             this.grdSells.Name = "grdSells";
-            this.grdSells.Size = new System.Drawing.Size(786, 370);
+            this.grdSells.Size = new System.Drawing.Size(837, 370);
             this.grdSells.TabIndex = 10;
             this.grdSells.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSells_CellContentClick);
             // 
@@ -104,6 +108,11 @@
             this.colHora.HeaderText = "Hora";
             this.colHora.Name = "colHora";
             // 
+            // colPrice
+            // 
+            this.colPrice.HeaderText = "Price";
+            this.colPrice.Name = "colPrice";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtpEndDate);
@@ -120,7 +129,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(22, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(786, 199);
+            this.groupBox1.Size = new System.Drawing.Size(837, 199);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filters";
@@ -233,9 +242,9 @@
             // 
             // lblCounterRes
             // 
-            this.lblCounterRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblCounterRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblCounterRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCounterRes.Location = new System.Drawing.Point(608, 643);
+            this.lblCounterRes.Location = new System.Drawing.Point(463, 716);
             this.lblCounterRes.Name = "lblCounterRes";
             this.lblCounterRes.Size = new System.Drawing.Size(91, 35);
             this.lblCounterRes.TabIndex = 14;
@@ -248,23 +257,18 @@
             this.lblCounter.AutoSize = true;
             this.lblCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCounter.ForeColor = System.Drawing.Color.Black;
-            this.lblCounter.Location = new System.Drawing.Point(488, 650);
+            this.lblCounter.Location = new System.Drawing.Point(343, 723);
             this.lblCounter.Name = "lblCounter";
             this.lblCounter.Size = new System.Drawing.Size(104, 18);
             this.lblCounter.TabIndex = 15;
             this.lblCounter.Text = "Products sold:";
-            // 
-            // colPrice
-            // 
-            this.colPrice.HeaderText = "Price";
-            this.colPrice.Name = "colPrice";
             // 
             // lblIncome
             // 
             this.lblIncome.AutoSize = true;
             this.lblIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncome.ForeColor = System.Drawing.Color.Black;
-            this.lblIncome.Location = new System.Drawing.Point(488, 719);
+            this.lblIncome.Location = new System.Drawing.Point(343, 646);
             this.lblIncome.Name = "lblIncome";
             this.lblIncome.Size = new System.Drawing.Size(98, 18);
             this.lblIncome.TabIndex = 17;
@@ -274,12 +278,40 @@
             // 
             this.btnIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncome.Location = new System.Drawing.Point(608, 712);
+            this.btnIncome.Location = new System.Drawing.Point(463, 639);
             this.btnIncome.Name = "btnIncome";
             this.btnIncome.Size = new System.Drawing.Size(91, 35);
             this.btnIncome.TabIndex = 16;
             this.btnIncome.Text = "0";
             this.btnIncome.UseVisualStyleBackColor = false;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(605, 646);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 18);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Total Income (U$D):";
+            // 
+            // btnIncomeRes
+            // 
+            this.btnIncomeRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnIncomeRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncomeRes.Location = new System.Drawing.Point(768, 638);
+            this.btnIncomeRes.Name = "btnIncomeRes";
+            this.btnIncomeRes.Size = new System.Drawing.Size(91, 35);
+            this.btnIncomeRes.TabIndex = 18;
+            this.btnIncomeRes.Text = "0";
+            this.btnIncomeRes.UseVisualStyleBackColor = false;
             // 
             // frmConsultSells
             // 
@@ -287,6 +319,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(888, 791);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnIncomeRes);
             this.Controls.Add(this.lblIncome);
             this.Controls.Add(this.btnIncome);
             this.Controls.Add(this.lblCounter);
@@ -329,5 +363,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private System.Windows.Forms.Label lblIncome;
         private System.Windows.Forms.Button btnIncome;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnIncomeRes;
     }
 }

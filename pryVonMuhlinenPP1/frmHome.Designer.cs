@@ -64,6 +64,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(619, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // welcomeToolStripMenuItem
             // 
@@ -164,28 +165,28 @@
             // consultToolStripMenuItem2
             // 
             this.consultToolStripMenuItem2.Name = "consultToolStripMenuItem2";
-            this.consultToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.consultToolStripMenuItem2.Size = new System.Drawing.Size(166, 22);
             this.consultToolStripMenuItem2.Text = "Consult products";
             this.consultToolStripMenuItem2.Click += new System.EventHandler(this.consultToolStripMenuItem2_Click);
             // 
             // registerToolStripMenuItem2
             // 
             this.registerToolStripMenuItem2.Name = "registerToolStripMenuItem2";
-            this.registerToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.registerToolStripMenuItem2.Size = new System.Drawing.Size(166, 22);
             this.registerToolStripMenuItem2.Text = "Register products";
             this.registerToolStripMenuItem2.Click += new System.EventHandler(this.registerToolStripMenuItem2_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.editToolStripMenuItem.Text = "Edit products";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteProductToolStripMenuItem
             // 
             this.deleteProductToolStripMenuItem.Name = "deleteProductToolStripMenuItem";
-            this.deleteProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteProductToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.deleteProductToolStripMenuItem.Text = "Delete product";
             this.deleteProductToolStripMenuItem.Click += new System.EventHandler(this.deleteProductToolStripMenuItem_Click);
             // 
@@ -197,7 +198,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Turquoise;
-            this.pictureBox1.Image = global::pryVonMuhlinenPP1.Properties.Resources._1140_ice_cream_cones_esp_imgcache_rev_web_1000_574;
+            this.pictureBox1.Image = global::pryVonMuhlinenPP1.Properties.Resources.ice_cream_cone_ice_cream;
             this.pictureBox1.Location = new System.Drawing.Point(0, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(619, 446);

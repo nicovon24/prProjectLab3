@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace pryVonMuhlinenPP1
 {
@@ -54,6 +57,8 @@ namespace pryVonMuhlinenPP1
                 int income = ClsNewSell.FillGrid(); //*calling the method grid
 
                 btnIncome.Text = $"${income}";
+
+                convertToDollar(income);
 
                 lectorSells.Close();
                 dbConnection.Close();
@@ -175,6 +180,8 @@ namespace pryVonMuhlinenPP1
 
                         btnIncome.Text = $"${income}";
 
+                        convertToDollar(income);
+
                         lectorDeConsulta.Close();
                     }
                 }
@@ -232,7 +239,51 @@ namespace pryVonMuhlinenPP1
             dtpEndDate.Value = DateTime.Today;
             grdSells.Rows.Clear();
             int income = ClsNewSell.getInitialGrid();
+            convertToDollar(income);
             btnIncome.Text = $"${income}";
+        }
+
+        //functions to convert to dollar
+        private async Task<string> CallApiAsync()
+        {
+            using (HttpClient httpClient = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage response = await httpClient.GetAsync("https://api.bluelytics.com.ar/v2/latest");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return await response.Content.ReadAsStringAsync();
+                    }
+                    else
+                    {
+                        // Handle non-successful responses (e.g., log or show error message)
+                        return $"Error: {response.StatusCode}";
+                    }
+                }
+                catch (HttpRequestException ex)
+                {
+                    // Handle exceptions (e.g., log or show error message)
+                    return $"Exception: {ex.Message}";
+                }
+            }
+        }
+
+        private async Task<string> useApi()
+        {
+            var api = await CallApiAsync();
+            JObject jsonData = JObject.Parse(api);
+            var blueValueSell = jsonData["blue"]["value_avg"];
+            return blueValueSell.ToString();
+        }
+
+        private async void convertToDollar( double income)
+        {
+            var x = await useApi();
+            double inDollar = double.Parse(x);
+            double res = Math.Round(income / inDollar, 2);
+            btnIncomeRes.Text = $"${res.ToString()}";
         }
     }
 }
