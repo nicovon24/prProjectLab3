@@ -32,7 +32,6 @@
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdClients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +43,9 @@
             this.colName,
             this.colAdress,
             this.colPhone});
-            this.grdClients.Location = new System.Drawing.Point(29, 45);
+            this.grdClients.Location = new System.Drawing.Point(24, 12);
             this.grdClients.Name = "grdClients";
-            this.grdClients.Size = new System.Drawing.Size(750, 323);
+            this.grdClients.Size = new System.Drawing.Size(750, 445);
             this.grdClients.TabIndex = 0;
             this.grdClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgClients_CellContentClick);
             // 
@@ -68,24 +67,12 @@
             this.colPhone.Name = "colPhone";
             this.colPhone.Width = 185;
             // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(29, 400);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 32);
-            this.btnBack.TabIndex = 7;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // frmConsultClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(807, 480);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.grdClients);
             this.Name = "frmConsultClients";
             this.Text = "Consult Clients";
@@ -101,6 +88,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAdress;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPhone;
-        private System.Windows.Forms.Button btnBack;
     }
 }

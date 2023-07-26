@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbID = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.gbDelete.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,24 +68,13 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(329, 182);
+            this.btnDelete.Location = new System.Drawing.Point(27, 187);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(81, 32);
             this.btnDelete.TabIndex = 29;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(27, 182);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 32);
-            this.btnBack.TabIndex = 28;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmDeleteClient
             // 
@@ -96,7 +84,6 @@
             this.ClientSize = new System.Drawing.Size(452, 253);
             this.Controls.Add(this.gbDelete);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnBack);
             this.Name = "frmDeleteClient";
             this.Text = "Delete Client";
             this.Load += new System.EventHandler(this.frmDeleteClient_Load);
@@ -112,6 +99,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbID;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnBack;
     }
 }

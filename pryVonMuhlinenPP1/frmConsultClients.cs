@@ -66,9 +66,6 @@ namespace pryVonMuhlinenPP1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmHome frmNew = new frmHome();
-            frmNew.ShowDialog();
         }
 
         private void btnSelectLocation_Click(object sender, EventArgs e)

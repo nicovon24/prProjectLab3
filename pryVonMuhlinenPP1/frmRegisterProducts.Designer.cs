@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -37,22 +36,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(40, 192);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 32);
-            this.btnBack.TabIndex = 10;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnSend
             // 
             this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.ForeColor = System.Drawing.Color.Black;
-            this.btnSend.Location = new System.Drawing.Point(248, 192);
+            this.btnSend.Location = new System.Drawing.Point(40, 196);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(81, 32);
             this.btnSend.TabIndex = 17;
@@ -91,7 +79,7 @@
             // 
             // nudPrice
             // 
-            this.nudPrice.Location = new System.Drawing.Point(209, 114);
+            this.nudPrice.Location = new System.Drawing.Point(133, 118);
             this.nudPrice.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -113,7 +101,6 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.btnBack);
             this.Name = "frmRegisterProducts";
             this.Text = "Reigister products";
             this.Load += new System.EventHandler(this.frmRegisterProducts_Load);
@@ -124,8 +111,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblPrice;

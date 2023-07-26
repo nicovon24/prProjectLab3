@@ -35,7 +35,6 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.grdSells = new System.Windows.Forms.DataGridView();
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colContador = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -124,17 +123,6 @@
             this.lblDate.TabIndex = 13;
             this.lblDate.Text = "Date";
             // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(61, 603);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 32);
-            this.btnBack.TabIndex = 17;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // grdSells
             // 
             this.grdSells.BackgroundColor = System.Drawing.SystemColors.Menu;
@@ -160,7 +148,7 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(536, 603);
+            this.btnGenerar.Location = new System.Drawing.Point(61, 628);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(86, 45);
             this.btnGenerar.TabIndex = 42;
@@ -184,7 +172,6 @@
             this.ClientSize = new System.Drawing.Size(683, 705);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.grdSells);
             this.Name = "frmConsultSellsByDate";
             this.Text = "Consult Sells By Date";
@@ -204,7 +191,6 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView grdSells;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn colContador;

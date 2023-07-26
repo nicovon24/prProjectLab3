@@ -32,7 +32,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.chartBindSource = new System.Windows.Forms.BindingSource(this.components);
             this.chrtSells = new LiveCharts.WinForms.CartesianChart();
-            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartBindSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,30 +41,18 @@
             // 
             // chrtSells
             // 
-            this.chrtSells.Location = new System.Drawing.Point(31, 43);
+            this.chrtSells.Location = new System.Drawing.Point(31, 33);
             this.chrtSells.Name = "chrtSells";
-            this.chrtSells.Size = new System.Drawing.Size(1023, 480);
+            this.chrtSells.Size = new System.Drawing.Size(1023, 560);
             this.chrtSells.TabIndex = 2;
             this.chrtSells.Text = "chrtSells";
             this.chrtSells.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.cartesianChart1_ChildChanged);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(31, 550);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 32);
-            this.btnBack.TabIndex = 8;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmChartSells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 712);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(1083, 615);
             this.Controls.Add(this.chrtSells);
             this.Name = "frmChartSells";
             this.Text = "Total income per month (graphic)";
@@ -79,6 +66,5 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.BindingSource chartBindSource;
         private LiveCharts.WinForms.CartesianChart chrtSells;
-        private System.Windows.Forms.Button btnBack;
     }
 }

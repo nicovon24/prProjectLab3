@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnBack = new System.Windows.Forms.Button();
             this.grdSells = new System.Windows.Forms.DataGridView();
             this.colAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,17 +57,6 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(22, 646);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 32);
-            this.btnBack.TabIndex = 11;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // grdSells
             // 
             this.grdSells.BackgroundColor = System.Drawing.SystemColors.Menu;
@@ -79,7 +67,7 @@
             this.colFecha,
             this.colHora,
             this.colPrice});
-            this.grdSells.Location = new System.Drawing.Point(22, 239);
+            this.grdSells.Location = new System.Drawing.Point(22, 232);
             this.grdSells.Name = "grdSells";
             this.grdSells.Size = new System.Drawing.Size(837, 370);
             this.grdSells.TabIndex = 10;
@@ -182,7 +170,7 @@
             // 
             this.cbxAllowEmployee.AutoSize = true;
             this.cbxAllowEmployee.ForeColor = System.Drawing.Color.Black;
-            this.cbxAllowEmployee.Location = new System.Drawing.Point(395, 142);
+            this.cbxAllowEmployee.Location = new System.Drawing.Point(394, 142);
             this.cbxAllowEmployee.Name = "cbxAllowEmployee";
             this.cbxAllowEmployee.Size = new System.Drawing.Size(138, 22);
             this.cbxAllowEmployee.TabIndex = 16;
@@ -215,7 +203,7 @@
             // lblEmployee
             // 
             this.lblEmployee.AutoSize = true;
-            this.lblEmployee.Location = new System.Drawing.Point(321, 89);
+            this.lblEmployee.Location = new System.Drawing.Point(320, 89);
             this.lblEmployee.Name = "lblEmployee";
             this.lblEmployee.Size = new System.Drawing.Size(74, 18);
             this.lblEmployee.TabIndex = 11;
@@ -234,7 +222,7 @@
             // 
             this.cbEmployee.Enabled = false;
             this.cbEmployee.FormattingEnabled = true;
-            this.cbEmployee.Location = new System.Drawing.Point(412, 86);
+            this.cbEmployee.Location = new System.Drawing.Point(411, 86);
             this.cbEmployee.Name = "cbEmployee";
             this.cbEmployee.Size = new System.Drawing.Size(121, 26);
             this.cbEmployee.TabIndex = 10;
@@ -244,7 +232,7 @@
             // 
             this.lblCounterRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblCounterRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCounterRes.Location = new System.Drawing.Point(463, 716);
+            this.lblCounterRes.Location = new System.Drawing.Point(768, 638);
             this.lblCounterRes.Name = "lblCounterRes";
             this.lblCounterRes.Size = new System.Drawing.Size(91, 35);
             this.lblCounterRes.TabIndex = 14;
@@ -257,7 +245,7 @@
             this.lblCounter.AutoSize = true;
             this.lblCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCounter.ForeColor = System.Drawing.Color.Black;
-            this.lblCounter.Location = new System.Drawing.Point(343, 723);
+            this.lblCounter.Location = new System.Drawing.Point(658, 646);
             this.lblCounter.Name = "lblCounter";
             this.lblCounter.Size = new System.Drawing.Size(104, 18);
             this.lblCounter.TabIndex = 15;
@@ -268,7 +256,7 @@
             this.lblIncome.AutoSize = true;
             this.lblIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncome.ForeColor = System.Drawing.Color.Black;
-            this.lblIncome.Location = new System.Drawing.Point(343, 646);
+            this.lblIncome.Location = new System.Drawing.Point(19, 646);
             this.lblIncome.Name = "lblIncome";
             this.lblIncome.Size = new System.Drawing.Size(98, 18);
             this.lblIncome.TabIndex = 17;
@@ -278,7 +266,7 @@
             // 
             this.btnIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncome.Location = new System.Drawing.Point(463, 639);
+            this.btnIncome.Location = new System.Drawing.Point(123, 639);
             this.btnIncome.Name = "btnIncome";
             this.btnIncome.Size = new System.Drawing.Size(91, 35);
             this.btnIncome.TabIndex = 16;
@@ -296,7 +284,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(605, 646);
+            this.label1.Location = new System.Drawing.Point(329, 646);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 18);
             this.label1.TabIndex = 19;
@@ -306,7 +294,7 @@
             // 
             this.btnIncomeRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnIncomeRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncomeRes.Location = new System.Drawing.Point(768, 638);
+            this.btnIncomeRes.Location = new System.Drawing.Point(477, 639);
             this.btnIncomeRes.Name = "btnIncomeRes";
             this.btnIncomeRes.Size = new System.Drawing.Size(91, 35);
             this.btnIncomeRes.TabIndex = 18;
@@ -318,7 +306,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(888, 791);
+            this.ClientSize = new System.Drawing.Size(885, 719);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIncomeRes);
             this.Controls.Add(this.lblIncome);
@@ -326,7 +314,6 @@
             this.Controls.Add(this.lblCounter);
             this.Controls.Add(this.lblCounterRes);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.grdSells);
             this.Name = "frmConsultSells";
             this.Text = "Consult Sells";
@@ -340,8 +327,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView grdSells;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAdress;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPhone;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBack = new System.Windows.Forms.Button();
             this.Data = new System.Windows.Forms.GroupBox();
             this.nudPrice = new System.Windows.Forms.NumericUpDown();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -42,17 +41,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
             this.gbDelete.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(38, 379);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 32);
-            this.btnBack.TabIndex = 10;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Data
             // 
@@ -144,7 +132,7 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(382, 379);
+            this.btnEdit.Location = new System.Drawing.Point(36, 383);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(81, 32);
             this.btnEdit.TabIndex = 29;
@@ -160,7 +148,6 @@
             this.ClientSize = new System.Drawing.Size(508, 440);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.gbDelete);
-            this.Controls.Add(this.btnBack);
             this.Name = "frmEditProducts";
             this.Text = "Edit Products";
             this.Load += new System.EventHandler(this.frmEditProducts_Load);
@@ -174,8 +161,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.GroupBox Data;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPrice;

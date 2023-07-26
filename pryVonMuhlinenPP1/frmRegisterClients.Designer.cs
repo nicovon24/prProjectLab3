@@ -35,7 +35,6 @@
             this.txtAdress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -64,7 +63,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.Color.Black;
-            this.lblPhone.Location = new System.Drawing.Point(38, 200);
+            this.lblPhone.Location = new System.Drawing.Point(41, 199);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(51, 18);
             this.lblPhone.TabIndex = 2;
@@ -88,7 +87,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(134, 198);
+            this.txtPhone.Location = new System.Drawing.Point(137, 197);
             this.txtPhone.MaxLength = 15;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(123, 20);
@@ -98,7 +97,7 @@
             // 
             this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.ForeColor = System.Drawing.Color.Black;
-            this.btnSend.Location = new System.Drawing.Point(343, 261);
+            this.btnSend.Location = new System.Drawing.Point(44, 263);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(81, 32);
             this.btnSend.TabIndex = 6;
@@ -106,25 +105,12 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.Location = new System.Drawing.Point(41, 261);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(81, 32);
-            this.btnBack.TabIndex = 8;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // frmRegisterClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(466, 328);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(466, 320);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtAdress);
@@ -150,7 +136,6 @@
         private System.Windows.Forms.TextBox txtAdress;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Button btnBack;
     }
 }
 
